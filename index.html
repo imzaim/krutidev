@@ -99,7 +99,7 @@
 </head>
 
 <body>
-    <h2>Krutidev ⇆ Unicode Converter (document .docx file converter)</h2>
+    <h2 id="pageheading">Krutidev ⇆ Unicode Converter (document .docx file converter)</h2>
     <div class="row"> <input type="file" id="uploadDoc" accept=".docx,.doc" /> <select id="direction">
             <option value="Select a converter">Select a converter</option>
             <option value="u2k">Unicode → Krutidev</option>
@@ -253,10 +253,13 @@
         }
         const currentUrl = window.location.href;
         window.onload = function() {
-            if(currentUrl === ){
+            if(currentUrl === "https://bloggerblogfacts.blogspot.com/2025/09/krutidev-unicode-converter-document.html"||currentUrl === "https://bloggerblogfacts.blogspot.com/2025/09/krutidev-unicode-converter-document.html?m=1"||currentUrl === "https://imzaim.github.io/krutidev/index.html"){
                 document.getElementById("powby").style.display = "none";
+                document.getElementById("pageheading").style.display = "none";
             } else{
                 document.getElementById("powby").style.display = "block";
+                document.getElementById("pageheading").style.display = "block";
+                console.log("block test");
             }
         };
     </script>
