@@ -229,7 +229,13 @@
                     (done, total) => updateProgress(done, total)); // Replace back 
                 zip.file("word/document.xml", newXml);
                 setStatus("Conversion done. Preparing download...");
-                const outBlob = await zip.generateAsync({ type: "blob" });
+                
+                //const outBlob = await zip.generateAsync({ type: "blob" });
+                const outBlob = await zip.generateAsync({
+                    type: "blob",
+                    mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                });
+                
                 link.href = URL.createObjectURL(outBlob);
                 var randomNumber = Math.floor(Math.random() * (99999 - 1 + 1)) + 1;
                 link.download = "converted"+randomNumber+".docx";
