@@ -18,16 +18,7 @@
     </script>
 
     <style>
-        body {
-            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-            margin: 24px;
-        }
-
-        h2 {
-            margin-top: 0;
-        }
-
-        .row {
+         .row {
             display: flex;
             gap: 10px;
             align-items: center;
@@ -122,12 +113,8 @@
     </div>
     <a id="downloadLink">Download Converted DOCX</a>
     <br>
-    <br>
-    <br>
-    <br>
-    <hr>
-    <p>Free Kruti Dev to Unicode and Unicode to Kruti Dev Converter. हिंदी Krutidev फॉन्ट को Unicode में और Unicode को Krutidev में आसानी से बदलें। Convert Hindi font in DOCX files online.</p>
-    <p>नोट: .docx फ़ाइल डाउनलोड करने के बाद, आपको kruti dev 010 फ़ॉन्ट का चयन करना होगा।</p>
+    
+    
 
     <script>
         const W_NS = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
@@ -264,7 +251,15 @@
             Convert_to_Kritidev_010();
             return legacy_text_var;
         }
+        const currentUrl = window.location.href;
+        window.onload = function() {
+            if(currentUrl === ){
+                document.getElementById("powby").style.display = "none";
+            } else{
+                document.getElementById("powby").style.display = "block";
+            }
+        };
     </script>
     <br>
-<p>Powered By: <a href="https://bloggerblogfacts.blogspot.com/">Blogger Facts</a></p>
+<p id="powby">Powered By: <a href="https://bloggerblogfacts.blogspot.com/">Blogger Facts</a></p>
 </body>
