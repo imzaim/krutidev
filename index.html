@@ -231,7 +231,8 @@
                 setStatus("Conversion done. Preparing download...");
                 const outBlob = await zip.generateAsync({ type: "blob" });
                 link.href = URL.createObjectURL(outBlob);
-                link.download = "converted.docx";
+                var randomNumber = Math.floor(Math.random() * (99999 - 1 + 1)) + 1;
+                link.download = "converted"+randomNumber+".docx";
                 link.style.display = "inline-block";
                 setStatus("✅ Ready. Click the download link.");
             } catch (e) {
